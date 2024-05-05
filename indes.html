@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur</title>
+    <link rel="stylesheet" href="/Formulaire/style.css">
+</head>
+<body>
+    <fieldset class="container">
+        <legend></legend>
+        <form action="" method="post">
+            <h2>Convertisseur Automatique</h2>
+            <div>
+                <span>Montant en CFA: </span>
+                <input type="number" name="cfa" id="cfa">
+            </div>
+            <div>
+                <span>Montant en Euro: </span>
+                <input type="number" name="euro" id="euro">
+            </div>
+            <div>
+                <span>Montant en Naira: </span>
+                <input type="number" name="naira" id="naira">
+            </div>
+            <div class="di">
+                <input type="button" value="Annuler" onclick="Annuler()">
+            </div>
+        </form>
+    </fieldset>
+
+    <script>
+        let cfa = document.getElementById("cfa");
+        let euro = document.getElementById("euro");
+        let naira = document.getElementById("naira");
+
+        cfa.addEventListener('change', convertir);
+        euro.addEventListener('change', convertir);
+        naira.addEventListener('change', convertir);
+
+        function convertir(){
+            if(this.id === 'cfa'){
+                euro.value = cfa.value * 0.0015;
+                naira.value = cfa.value * 1.85;
+            } else if(this.id === 'euro'){
+                cfa.value = euro.value * 655.89;
+                naira.value = euro.value * 1068.13;
+            } else if(this.id === 'naira'){
+                euro.value = naira.value * 0.00093;
+                cfa.value = naira.value * 0.61;
+            }
+        }
+        
+        function Annuler(){
+            euro.value = "";
+            naira.value = "";
+            cfa.value = "";
+        }
+    </script>
+</body>
+</html>
