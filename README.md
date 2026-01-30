@@ -1,5 +1,6 @@
 # Convertisseur Automatique de Devises
 Ce projet est un convertisseur automatique de devises conçu pour simplifier les conversions entre le franc CFA (XOF), l'euro (EUR) et le naira (NGN). Avec une interface conviviale, il permet aux utilisateurs d'entrer des montants dans l'une des devises et de voir instantanément les équivalents dans les deux autres devises. Les conversions sont mises à jour automatiquement dès que les valeurs sont modifiées.
+--
 
 # Fonctionnalités
 * Conversion automatique entre le franc CFA, l'euro et le naira.
